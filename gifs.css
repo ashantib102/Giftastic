@@ -1,0 +1,727 @@
+/* General Font Styling */
+.sedgwick-ave-display-regular {
+  font-family: "Sedgwick Ave Display", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.irish-grover-regular {
+  font-family: "Irish Grover", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.londrina-shadow-regular {
+  font-family: "Londrina Shadow", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.freckle-face-regular {
+  font-family: "Freckle Face", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Body Styling */
+
+body,html {
+  background-color: black;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Navbar Styling */
+.navbar {
+  background-color: black;
+  font-family: "Londrina Shadow";
+  width: 100%;
+  font-weight: 800;
+  font-size: 30px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar .logo {
+  transform: translateX(-100%); /* Start off-screen to the right */
+  transition: transform 0.5s ease-in-out; /* Smooth slide effect */
+}
+
+
+.navbar .logo img {
+  width: 70px;
+  border-radius: 15px;
+  margin-left: 30px;
+  display: flex;
+  
+}
+
+.navbar .logo img:hover {
+  box-shadow: 0px 0px 8px rgba(255, 255, 255, 0.7);
+  background: linear-gradient(45deg, red, blue);
+  animation: flip 1.5s;
+}
+
+/* Navbar Links Styling */
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+  margin-right: 30px;
+  transform: translateX(100%); /* Start off-screen */
+  transition: transform 0.5s ease-in-out; /* Slide effect */
+}
+
+/* When the page loads, use this class to trigger the transition */
+.navbar.loaded ul {
+  transform: translateX(0); /* Move the navbar elements into view */
+}
+
+.navbar.loaded .logo {
+  transform: translateX(0); /* Move the logo into view */
+}
+
+
+.navbar ul li {
+  display: inline;
+}
+
+.navbar ul li a {
+  color: white;
+  text-decoration: none;
+  transition: box-shadow 0.3s, transform 0.3s;
+  float: left;
+  display: block;
+  text-align: center;
+  padding: 14px 15px 10px 10px;
+  border-radius: 30px;
+}
+
+/* Flip Animation on Hover */
+@keyframes flip {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+.bounce {
+  animation: bounce 2s infinite;
+}
+
+
+.navbar ul li a:hover {
+  box-shadow: 0px 0px 8px rgba(255, 255, 255, 0.7);
+  background: linear-gradient(45deg, red, blue);
+  animation: flip 1.5s ;
+}
+
+/* Header Section */
+.header-container {
+  background-color: black;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 60px;
+  overflow: hidden; /* Ensures elements don't overflow during animation */
+}
+
+/* Initial position of the background image */
+.bg-image img {
+  max-width: 500px;
+  height: auto;
+  border-radius: 150px;
+  transition: transform 0.5s ease-in-out; /* Slide effect */
+  animation: upAndDown 2s infinite ease-in-out; /* Apply the animation to keep it running indefinitely */
+}
+
+/* Up and Down Continuous Animation */
+@keyframes upAndDown {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px); /* Move the image up */
+  }
+  100% {
+    transform: translateY(0); /* Move the image back to the original position */
+  }
+}
+
+/* Initial position of the heading */
+.header-container h1 {
+  font-family: "Freckle Face", sans-serif;
+  font-weight: 800;
+  font-size: 40px;
+  margin-left: 100px;
+  max-width: 600px;
+  transition: transform 0.5s ease-in-out; /* Slide effect */
+}
+
+h1 strong {
+  display: block;
+  background: linear-gradient(to right, red, blue); /* Blue to red gradient */
+  -webkit-background-clip: text; /* For webkit browsers like Chrome */
+  background-clip: text; /* Apply the gradient only to the text */
+  color: transparent; /* Make the text color transparent to show the gradient */
+  font-weight: bold;
+  font-size: 100px;
+}
+
+/* Define the dance animation */
+@keyframes dance {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-5px);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+  75% {
+    transform: translateY(-5px);
+  }
+}
+
+/* Apply the animation on hover */
+h1 strong:hover {
+  animation: dance 0.5s infinite;
+}
+
+/* Search Section */
+.main-content .search-section {
+  padding: 10px 20px;
+  text-align: center;
+  align-items: center;
+}
+
+.main-content .search-container h1 {
+  align-items: center;
+  font-family: "Freckle Face", sans-serif;
+  font-size:70px;
+  background: linear-gradient(to right, red, blue); /* Blue to red gradient */
+  -webkit-background-clip: text; /* For webkit browsers like Chrome */
+  background-clip: text; /* Apply the gradient only to the text */
+  color: transparent; /* Make the text color transparent to show the gradient */
+  font-weight: bold;
+}
+
+.main-content .search-container h1:hover {
+  animation: dance 0.5s infinite;
+}
+
+.search-container p {
+  font-family: "Yatra One", "Oregano", system-ui;
+  font-size: 30px;
+  font-weight:800;
+  color: white;
+  margin-bottom: 20px;
+}
+
+
+.search-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.search-form input[type="text"] {
+  width: 80%;
+  max-width: 400px;
+  padding: 30px;
+  border: 1px solid black;
+  border-radius: 20px;
+  font-size: 20px;
+  color: #333;
+}
+
+.search-form button {
+  font-family: "Freckle Face",sans-serif;
+  font-size:25px;
+  padding: 20px 30px;
+  background: linear-gradient(to right, red, blue); /* Blue to red gradient */
+  color: white;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  
+}
+
+.search-form button:hover {
+  background-color: #ff4500;
+  animation: flip 1.5s;
+}
+
+
+.gif-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.gif-link {
+  display: inline-block;
+  margin: 10px;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gif-link img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gif-link:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.gif-link:hover img {
+  cursor: pointer;
+}
+
+#gen {
+  font-family: "Freckle Face", sans-serif;
+  font-size: 70px;
+  background: linear-gradient(to right, red, blue); /* Blue to red gradient */
+  -webkit-background-clip: text; /* For webkit browsers like Chrome */
+  background-clip: text; /* Apply the gradient only to the text */
+  color: transparent; /* Make the text color transparent to show the gradient */
+  font-weight: bold;
+}
+
+#gen:hover {
+  animation: dance 0.5s infinite;
+}
+
+.drop-zone {
+  border-radius: 8px;
+  padding: 40px 20px;
+  text-align: center;
+  margin-top: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.drop-zone p {
+  font-family: "Yatra One", "Oregano", system-ui;
+  font-weight: 800;  
+  font-size: 20px;
+  color: white;
+}
+
+.drop-zone:hover {
+  background-color: #333;
+  border-color: #888;
+}
+
+.drop-zone.dragover {
+  background-color: #333;
+  border-color: #4a9eff;
+}
+
+.browse-button {
+    /* Keep your existing styles */
+    font-family: "Freckle Face", sans-serif;
+    width: 300px;
+    font-size: 25px;
+    padding: 20px 30px;
+    background: linear-gradient(to right, red, blue);
+    color: white;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    /* Add these lines for centering */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.browse-button:hover {
+  background-color: #3a8eef;
+  animation: flip 1.5s;
+}
+
+.preview {
+  max-width: 100%;
+  margin: 20px 0;
+  text-align: center;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.preview img {
+  max-width: 100%;
+  max-height: 300px;
+  border-radius: 15px;
+}
+
+.captions {
+  margin: 20px 0;
+  padding: 20px;
+  border-radius: 8px;
+  font-family: "Yatra One", "Oregano", system-ui;
+  color: white;
+}
+
+.loading {
+  font-family: "Yatra One", "Oregano", system-ui;
+  display: none;
+  margin: 20px 0;
+  text-align: center;
+  color: white;
+}
+
+.error {
+  color: #ff4a4a;
+  background-color: white;
+  padding: 10px;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+
+.caption-item {
+  background-color: black;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 4px;
+  border-left: 4px solid #4a9eff;
+}
+
+/* Footer Section */
+.footer {
+  font-family: "Yatra One", "Oregano", system-ui;
+  font-weight: 800;  font-size: 20px;
+  background-color: black;
+  color: white;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.footer-content {
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.footer a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer .contact-info {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer .newsletter {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer h3 {
+  font-family: "Freckle Face",sans-serif;
+  font-size: 50px;
+  font-weight: 800;
+  background: linear-gradient(to right, red, blue); /* Blue to red gradient */
+  -webkit-background-clip: text; /* For webkit browsers like Chrome */
+  background-clip: text; /* Apply the gradient only to the text */
+  color: transparent; /* Make the text color transparent to show the gradient */
+}
+
+.footer h3:hover {
+  animation: dance 0.5s infinite;
+}
+
+.footer .social-media {
+  margin-top: 20px;
+}
+
+.footer .social-media a {
+  color: white;
+  font-size: 20px;
+  margin: 0 10px;
+  padding: 10px;
+  border-radius: 50%; /* Makes the button circular */
+  text-decoration: none; /* Removes underline */
+  transition: background 0.3s, color 0.3s; /* Smooth transition */
+}
+
+.footer .social-media a:hover {
+  color: white; /* Keeps the icon white */
+  background: linear-gradient(45deg, red, blue); /* Red-to-blue gradient */
+  animation: dance 0.5s infinite;
+  
+}
+.newsletter form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.newsletter input[type="email"] {
+  padding: 10px;
+  width: 80%;
+  max-width: 300px;
+  border: none;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  color: black;
+}
+
+.newsletter button {
+  font-family: "Freckle Face";
+  font-size:25px;
+  padding: 20px 30px;
+  background: linear-gradient(to right, red, blue); /* Blue to red gradient */
+  color: white;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.newsletter button:hover {
+  background-color: #ff4500;
+  animation: flip 1.5s
+}
+
+/* Base styles remain the same */
+
+/* Extra large screens (1200px and up) */
+@media screen and (min-width: 1200px) {
+  .header-container {
+    padding: 80px;
+  }
+
+  .bg-image img {
+    max-width: 600px;
+  }
+
+  .header-container h1 strong {
+    font-size: 120px;
+  }
+}
+
+/* Large screens (992px to 1199px) */
+@media screen and (max-width: 1199px) {
+  .header-container {
+    padding: 40px;
+  }
+
+  .bg-image img {
+    max-width: 400px;
+  }
+
+  .header-container h1 {
+    font-size: 35px;
+    margin-left: 50px;
+  }
+
+  h1 strong {
+    font-size: 80px;
+  }
+
+  .main-content .search-container h1 {
+    font-size: 60px;
+  }
+}
+
+/* Medium screens (768px to 991px) */
+@media screen and (max-width: 991px) {
+  .navbar {
+    font-size: 24px;
+  }
+
+  .navbar .logo img {
+    width: 60px;
+    margin-left: 20px;
+  }
+
+  .header-container {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px;
+  }
+
+  .header-container h1 {
+    margin-left: 0;
+    margin-top: 30px;
+  }
+
+  h1 strong {
+    font-size: 60px;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer .contact-info,
+  .footer .newsletter {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* Small screens (576px to 767px) */
+@media screen and (max-width: 767px) {
+  .navbar {
+    flex-direction: column;
+    padding: 10px 0;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    align-items: center;
+    margin: 10px 0;
+    gap: 5px;
+  }
+
+  .navbar .logo {
+    margin-bottom: 10px;
+  }
+
+  .bg-image img {
+    max-width: 300px;
+  }
+
+  .header-container h1 {
+    font-size: 30px;
+  }
+
+  h1 strong {
+    font-size: 50px;
+  }
+
+  .main-content .search-container h1 {
+    font-size: 40px;
+  }
+
+  .search-container p {
+    font-size: 24px;
+  }
+
+  .search-form input[type="text"] {
+    padding: 20px;
+    font-size: 16px;
+  }
+
+  .search-form button {
+    padding: 15px 25px;
+    font-size: 20px;
+  }
+
+  .footer h3 {
+    font-size: 40px;
+  }
+}
+
+/* Extra small screens (575px and below) */
+@media screen and (max-width: 575px) {
+  .navbar {
+    font-size: 20px;
+  }
+
+  .navbar .logo img {
+    width: 50px;
+  }
+
+  .bg-image img {
+    max-width: 250px;
+  }
+
+  h1 strong {
+    font-size: 40px;
+  }
+
+  .main-content .search-container h1 {
+    font-size: 35px;
+  }
+
+  .search-container p {
+    font-size: 20px;
+  }
+
+  .browse-button {
+    width: 250px;
+    font-size: 20px;
+    padding: 15px 25px;
+  }
+
+  .caption-item {
+    padding: 10px;
+  }
+
+  .footer h3 {
+    font-size: 35px;
+  }
+}
+
+/* Handle very small screens */
+@media screen and (max-width: 360px) {
+  .navbar {
+    font-size: 18px;
+  }
+
+  .bg-image img {
+    max-width: 200px;
+  }
+
+  h1 strong {
+    font-size: 35px;
+  }
+
+  .main-content .search-container h1 {
+    font-size: 30px;
+  }
+
+  .search-form input[type="text"] {
+    padding: 15px;
+  }
+
+  .browse-button {
+    width: 200px;
+    font-size: 18px;
+    padding: 12px 20px;
+  }
+}
+
+/* Fix for the navbar slide animation on mobile */
+@media screen and (max-width: 767px) {
+  .navbar .logo,
+  .navbar ul {
+    transform: translateX(0);
+  }
+}

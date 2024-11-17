@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="https://glitch.com/favicon.ico" />
+
+    <!-- Font Awesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Freckle+Face&family=Irish+Grover&family=Londrina+Shadow&family=Nabla&family=Oregano:ital@0;1&family=Rubik+Glitch&family=Rubik+Vinyl&family=Sedgwick+Ave+Display&family=Yatra+One&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="/gifs.css" />
+
+    
+  </head>
+  <body>
+    <header>
+    <div class="navbar">
+      <a href="#" class="logo"><img src="https://cdn.glitch.global/a2ea5dd7-e315-4987-ace7-9d096603d787/JessicaLogo?v=1731623038895" width="80px"> </a>
+      <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="gifs.html">Gifs</a></li>
+            <li><a href="game.html">Games</a></li>
+      </ul>
+    </div>
+    <div class="header-container">
+      <div class="bg-image hover-zoom">
+        <img src="https://cdn.glitch.global/a2ea5dd7-e315-4987-ace7-9d096603d787/littlemermaiddance.webp?v=1731700542640">
+      </div>
+      
+      <h1>
+        <strong>GIFTastic </strong>Welcome to the home of the funniest GIFs on the internet. Whether you're looking for funny animations or popular memes, easily find and download it using the button below.
+      </h1>
+
+    </div>
+    </header>
+    
+          <!-- Search Section -->
+    <div class="main-content">
+      <section class="search-section">
+        <div class="search-container">
+          <h1>GIF Search & Generate</h1>
+          <p>This page allows you to search for fun GIFs on demand using the Giphy API.</p>
+          <form id="search-form" class="search-form">
+            <input
+              type="text"
+              id="search-input"
+              placeholder="Enter a keyword (e.g., cats, dance, fun)"
+              required
+            >
+            <button type="submit">Search</button>
+          </form>
+          <div id="gif-container" class="gif-container"></div>
+        </div>
+      </section>
+    </div>
+    
+    
+    
+    <div class="drop-zone" id="dropZone">
+    <h1 id="gen">GIF Caption Generator</h1>
+        <p>Drop your GIF here</p>
+        <div class="browse-button">Browse Files</div>
+        <input type="file" id="fileInput" accept="image/gif" style="display: none">
+    </div>
+
+    <div class="preview" id="preview"></div>
+    <div class="loading" id="loading">
+        Analyzing GIF...
+    </div>
+    <div class="captions" id="captions"></div>
+    
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-content">
+            <!-- Contact Information -->
+            <div class="contact-info">
+                <h3>Contact</h3>
+                <p><strong>Address :</strong> 1234 Main Street, New York, US</p>
+                <p><strong>Phone :</strong> (123) 456-7890</p>
+                <p><strong>Email :</strong> Giftastic@gmail.com</p>
+            </div>
+
+            <!-- Newsletter Sign-Up Form -->
+            <div class="newsletter">
+                <h3>Newsletter</h3>
+                <p>Subscribe to our newsletter to stay updated.</p>
+                <form>
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Social Media Links -->
+        <div class="social-media">
+            <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+        </div>
+
+        
+    </footer>
+    
+    <!-- Font Awesome Icons -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+    <script src="/gifs.js" defer></script>
+  </body>
+</html>
